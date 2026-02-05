@@ -1,0 +1,164 @@
+
+
+
+
+
+<%# <nav class="navbar bg-body-tertiary"> %>
+
+<nav class="navbar bg-success-subtle text-success-emphasis" >
+
+
+
+
+    <a class="navbar-brand" href="#">
+       <%= image_tag "juvilbrainstorm.png" %>
+
+
+
+
+<p class="text-primary">JuvilBrainStorm</p>
+    </a>
+  </div>
+</nav>
+
+
+
+
+<div class="card text-bg-dark">
+  <%= image_tag "brainstorm3.png" %>
+
+  <div class="card-img-overlay">
+
+
+  </div>
+</div>
+    <h1><a href="started" class="text-warning bg-dark">Get Started it's free</a></h1>
+<div class="card text-bg-dark">
+  <%= image_tag "brainstorm4.png" %>
+
+  <div class="card-img-overlay">
+
+
+  </div>
+</div>
+
+<div class="p-5">
+
+
+
+
+
+
+
+  <div class="row align-items-end">
+    <div class="col">
+   <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+    </div>
+    <div class="col">
+     <a href="https://x.com"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="col">
+  <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="p-5">
+
+
+
+
+
+
+<div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+
+      <div class="card-body">
+
+        <a href="https://www.google.com/search?client=opera&q=appstore&sourceid=opera&ie=UTF-8&oe=UTF-8" class="btn btn-white"><%= image_tag "brainstorm7.png" %></a>
+        <a href="https://www.google.com/search?client=opera&q=googleplay+icon&sourceid=opera&ie=UTF-8&oe=UTF-8" class="btn btn-white"><%= image_tag "brainstorm8.png" %></a>
+      </div>
+    </div>
+  </div>
+
+
+
+<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+  <div class="container-fluid">
+    <%= link_to "#", class: "navbar-brand" do %>
+
+
+
+
+<nav class="navbar bg-dark-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand"></a>
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+    <% end %>
+
+
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "About Us", "About", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Messages", "#", class: "nav-link" %>
+          </li>
+
+
+
+<li class="nav-item">
+            <%= link_to "Curriculum", "#", class: "nav-link" %>
+          </li>
+
+<li class="nav-item">
+            <%= link_to "Contact", "#", class: "nav-link" %>
+          </li>
+
+
+<li class="nav-item">
+            <%= link_to "Newes", "#", class: "nav-link" %>
+          </li>
+
+
+Donation
+          <li class="nav-item dropdown">
+          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= image_tag "juvilbrainstorm.png", class: "avatar", alt: "dropdown menu" %>
+          </a>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "login", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
