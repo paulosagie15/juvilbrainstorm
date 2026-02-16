@@ -12,3 +12,27 @@
 </div>
 
 <%= link_to "New post", new_post_path %>
+
+<% content_for :title, "Software Development Blog UK | Coding Academy Insights" %>
+<% content_for :description, "Read expert guides on becoming a software developer in the UK, coding bootcamps, salaries and career advice." %>
+
+<h1>Software Development Blog UK</h1>
+
+<p>
+Explore expert insights, career advice, and software development
+training guides for aspiring developers across the UK.
+</p>
+
+<% @posts.each do |post| %>
+  <div class="blog-card">
+    <h2>
+      <%= link_to post.title, blog_path(post) %>
+    </h2>
+
+    <p>
+      <%= truncate(strip_tags(post.content), length: 150) %>
+    </p>
+
+    <%= link_to "Read More", blog_path(post), class: "btn btn-outline-primary" %>
+  </div>
+<% end %>

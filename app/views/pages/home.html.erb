@@ -4,11 +4,10 @@
 
 
 <%# <nav class="navbar bg-body-tertiary"> %>
+<% content_for :title, "Software Development Training UK | Coding Academy & Full Stack Courses" %>
+<% content_for :description, "Join our leading Software Development Training Academy in the UK. Learn full stack development, Ruby on Rails, and become job-ready with expert-led coding courses." %>
 
 <nav class="navbar bg-success-subtle text-success-emphasis" >
-
-
-
 
     <a class="navbar-brand" href="#">
        <%= image_tag "juvilbrainstorm.png" %>
@@ -66,12 +65,6 @@
 
 
   </div>
-</div>
-
-
-<div class="p-5">
-<% content_for :title, "Software Development Training UK | Coding Academy & Full Stack Courses" %>
-<% content_for :description, "Join our leading Software Development Training Academy in the UK. Learn full stack development, Ruby on Rails, and become job-ready with expert-led coding courses." %>
 </div>
 
 
@@ -256,7 +249,7 @@ Website:www.juvilbrainstorm.com<br>
 
 
 <li class="nav-item">
-            <%= link_to "Curriculum", "#", class: "nav-link" %>
+            <%= link_to "curriculum", "curriculum", class: "nav-link" %>
           </li>
 
 <li class="nav-item">
