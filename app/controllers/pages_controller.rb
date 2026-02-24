@@ -6,4 +6,10 @@ class PagesController < ApplicationController
   def About
   end
 
+def courses_path
+
+end
+def curriculum
+end
+
 end
